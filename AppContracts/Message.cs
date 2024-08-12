@@ -1,6 +1,6 @@
 ﻿namespace AppContracts
 {
-    public class Messasge
+    public class Message
     {
          public int Id { get; set; }
 

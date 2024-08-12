@@ -3,10 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\MSi\\source\\repos\\App\\App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\messasge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4ACC166-A604-4D53-867D-5B1243BD3A3E}|..\\InfrastructeProvider\\InfrastructeProvider.csproj|c:\\users\\msi\\source\\repos\\app\\infrastructeprovider\\messagesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\extensions\\messageextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,25 +24,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\User.cs",
-              "RelativeDocumentMoniker": "..\\AppContracts\\User.cs",
-              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\User.cs",
-              "RelativeToolTip": "..\\AppContracts\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAzAAAA",
+              "Title": "MessageExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Extensions\\MessageExtensions.cs",
+              "RelativeDocumentMoniker": "..\\AppContracts\\Extensions\\MessageExtensions.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Extensions\\MessageExtensions.cs",
+              "RelativeToolTip": "..\\AppContracts\\Extensions\\MessageExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T14:43:29.016Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-08-12T15:52:18.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Messasge.cs",
-              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Messasge.cs",
-              "RelativeDocumentMoniker": "..\\AppContracts\\Messasge.cs",
-              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Messasge.cs",
-              "RelativeToolTip": "..\\AppContracts\\Messasge.cs",
+              "Title": "MessageSource.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\MessageSource.cs",
+              "RelativeDocumentMoniker": "..\\InfrastructeProvider\\MessageSource.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\MessageSource.cs",
+              "RelativeToolTip": "..\\InfrastructeProvider\\MessageSource.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwCYAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-12T15:20:04.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Message.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Message.cs",
+              "RelativeDocumentMoniker": "..\\AppContracts\\Message.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\Message.cs",
+              "RelativeToolTip": "..\\AppContracts\\Message.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T14:59:03.412Z",
