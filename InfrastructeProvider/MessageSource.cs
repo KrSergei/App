@@ -5,14 +5,6 @@ using System.Net.Sockets;
 
 namespace InfrastructeProvider
 {
-    public interface IMessageSource
-    {
-        Task<Message?> Resive();
-        Task Send(Message message, IPEndPoint iPEndPoint);
-        //IPEndPoint CreateEndpoint(string adress, int port);
-        //IPEndPoint GetServerEndpoint();
-    }
-
     public class MessageSource : IMessageSource
     {
         private readonly UdpClient _udpClient;
@@ -27,16 +19,16 @@ namespace InfrastructeProvider
             throw new NotImplementedException();
         }
 
-        public async Task<Message?> Resive()
+        public async Task<ResiveResult?> Resive(CancellationToken cancellationToken)
         {
-           var data = await _udpClient.ReceiveAsync();
+           var data = await _udpClient.ReceiveAsync(cancellationToken);
             
-            return data.Buffer.ToMessage();
+            return new (data.RemoteEndPoint,  data.Buffer.ToMessage());
         }
 
-        public async Task Send(Message message, IPEndPoint ep)
+        public async Task Send(Message message, IPEndPoint ep, CancellationToken cancellationToken)
         {
-            await _udpClient.SendAsync(message.ToBytes(), ep);
+            await _udpClient.SendAsync(message.ToBytes(), ep, cancellationToken);
         }
     }
 }

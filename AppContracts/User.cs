@@ -3,12 +3,11 @@ using System.Text.Json.Serialization;
 
 namespace AppContracts
 {
-    public class User
+    public record User
     {
         public int Id { get; set; }
-
-        public string Name { get; set; }
+        public string? Name { get; set; }
         [JsonIgnore]
-        public IPEndPoint? IPEndPoint { get; set; }
+        public IPEndPoint? EndPoint { get; set; }
     }
 }
