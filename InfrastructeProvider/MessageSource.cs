@@ -19,7 +19,7 @@ namespace InfrastructeProvider
             throw new NotImplementedException();
         }
 
-        public async Task<ResiveResult?> Resive(CancellationToken cancellationToken)
+        public async Task<ResiveResult> Resive(CancellationToken cancellationToken)
         {
            var data = await _udpClient.ReceiveAsync(cancellationToken);
             

@@ -1,29 +1,24 @@
-﻿using System.Data;
+﻿using Domain;
 
 namespace AppContracts
 {
     public class Message
     {
          public int Id { get; set; }
-
         public string Text { get; set; } = string.Empty;
-
         public int SenderId { get; set; }
-
-        public int RecepentId { get; set; } = -1;
-
+        public int RecipientId { get; set; } = -1;
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
         public Command Command { get; set; } = Command.None;
-
         public IEnumerable<User> Users { get; set; } = [];
 
-    }
-
-    public enum Command
-    {
-        None,
-        Join, 
-        Exit,
-        Users,
-        Confirm
+        public static Message FromDomain(MessageEntity entity) => new Message
+        {
+            Id = entity.Id,
+            Text = entity.Text,
+            RecipientId = entity.RepicientId,
+            SenderId = entity.SenderId,
+            CreatedAt = entity.CreatedAt
+        };
     }
 }

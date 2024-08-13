@@ -77,7 +77,7 @@ namespace Core
 
         private void JoinHandler(Message message)
         {
-           _user.Id = message.RecepentId;
+           _user.Id = message.RecipientId;
             Console.WriteLine("Join succes");
         }
     }

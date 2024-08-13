@@ -1,4 +1,5 @@
 ﻿using AppContracts;
+using InfrastructePersistence.Context;
 using InfrastructeProvider;
 using System.Net;
 using System.Xml.Linq;
@@ -9,17 +10,19 @@ namespace Core
     {
 
         private readonly IMessageSource _source;
+        private readonly ChatContext _context;
         private HashSet<User> _users = [];
 
-        public ChatServer(IMessageSource messageSource)
+        public ChatServer(IMessageSource messageSource, ChatContext context)
         {
             _source = messageSource;
+            _context = context;
         }
 
         public override async Task Start()
         {
             await Task.CompletedTask;
-            Task.Run(Listener);
+            await Task.Run(Listener);
         }
 
         protected override async Task Listener()
@@ -56,7 +59,7 @@ namespace Core
 
         private async Task MessageHandler(ResiveResult resiveResult)
         {
-            if(resiveResult.Message!.RecepentId < 0)
+            if(resiveResult.Message!.RecipientId < 0)
             {
                 await SendAllAsync(resiveResult.Message);
             } 
@@ -76,7 +79,6 @@ namespace Core
                        resiveResult.Message,
                        repicientEndPoint,
                        CancellationToken);
-
                 }
             }
         }
@@ -92,12 +94,12 @@ namespace Core
             user.EndPoint = result.EndPoint;
 
             await _source.Send(
-                new Message() { Command = Command.Join ,RecepentId = user.Id},
+                new Message() { Command = Command.Join ,RecipientId = user.Id},
                 user.EndPoint!,
                 CancellationToken);
 
             await _source.Send(
-                new Message() { Command = Command.Users, RecepentId = user.Id, Users = _users },
+                new Message() { Command = Command.Users, RecipientId = user.Id, Users = _users },
                 user.EndPoint!,
                 CancellationToken);            
 
