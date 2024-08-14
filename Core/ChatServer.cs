@@ -1,8 +1,7 @@
 ﻿using AppContracts;
 using InfrastructePersistence.Context;
 using InfrastructeProvider;
-using System.Net;
-using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core
 {
@@ -21,6 +20,7 @@ namespace Core
 
         public override async Task Start()
         {
+            Console.WriteLine("Server started");
             await Task.CompletedTask;
             await Task.Run(Listener);
         }
@@ -42,6 +42,7 @@ namespace Core
                             await JoinHandler(resiveResult);
                             break;
                         case Command.Exit:
+                            await ExitHandler(resiveResult);
                             break;
                         case Command.Users:
                             break;
@@ -55,6 +56,14 @@ namespace Core
                     await Console.Out.WriteLineAsync(exception.Message);
                 }
             }
+        }
+
+        private async Task ExitHandler(ResiveResult resiveResult)
+        {
+            var user = User.FromDomain(await _context.Users.FirstAsync(x => x.Id == resiveResult.Message!.SenderId));
+            user.LastOnLine = DateTime.Now;
+            await _context.SaveChangesAsync();
+            _users.Remove(_users.First(x => x.Id == resiveResult.Message!.SenderId));    
         }
 
         private async Task MessageHandler(ResiveResult resiveResult)
@@ -98,13 +107,19 @@ namespace Core
                 user.EndPoint!,
                 CancellationToken);
 
-            await _source.Send(
-                new Message() { Command = Command.Users, RecipientId = user.Id, Users = _users },
-                user.EndPoint!,
-                CancellationToken);            
-
             await SendAllAsync(new Message() { Command = Command.Confirm, Text = $"{user.Name} joined to chat"});
 
+            await SendAllAsync(new Message() { Command = Command.Users, RecipientId = user.Id, Users = _users });
+
+            var unreadMsg = await _context.Messages.Where(m => m.RepicientId == user.Id).ToListAsync();
+
+            foreach (var msg in unreadMsg)
+            {
+                await _source.Send(
+                    Message.FromDomain(msg),
+                    user.EndPoint,
+                    CancellationToken);
+            }
         }
 
         private async Task SendAllAsync(Message message)

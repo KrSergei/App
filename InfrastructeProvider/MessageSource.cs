@@ -14,11 +14,6 @@ namespace InfrastructeProvider
             _udpClient = udpClient;
         }
 
-        public IPEndPoint CreateEndpoint(string adress, int port)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<ResiveResult> Resive(CancellationToken cancellationToken)
         {
            var data = await _udpClient.ReceiveAsync(cancellationToken);

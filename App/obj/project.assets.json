@@ -922,6 +922,86 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "AppContracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Proxies": "8.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+        },
+        "compile": {
+          "bin/placeholder/AppContracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppContracts.dll": {}
+        }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "InfrastructePersistence": "1.0.0",
+          "InfrastructeProvider": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Proxies": "8.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Proxies": "8.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "InfrastructePersistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Proxies": "8.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+        },
+        "compile": {
+          "bin/placeholder/InfrastructePersistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InfrastructePersistence.dll": {}
+        }
+      },
+      "InfrastructeProvider/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "AppContracts": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.8",
+          "Microsoft.EntityFrameworkCore.Proxies": "8.0.8",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4"
+        },
+        "compile": {
+          "bin/placeholder/InfrastructeProvider.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InfrastructeProvider.dll": {}
+        }
       }
     }
   },
@@ -2382,10 +2462,40 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "AppContracts/1.0.0": {
+      "type": "project",
+      "path": "../AppContracts/AppContracts.csproj",
+      "msbuildProject": "../AppContracts/AppContracts.csproj"
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "InfrastructePersistence/1.0.0": {
+      "type": "project",
+      "path": "../InfrastructePersistence/InfrastructePersistence.csproj",
+      "msbuildProject": "../InfrastructePersistence/InfrastructePersistence.csproj"
+    },
+    "InfrastructeProvider/1.0.0": {
+      "type": "project",
+      "path": "../InfrastructeProvider/InfrastructeProvider.csproj",
+      "msbuildProject": "../InfrastructeProvider/InfrastructeProvider.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AppContracts >= 1.0.0",
+      "Core >= 1.0.0",
+      "Domain >= 1.0.0",
+      "InfrastructePersistence >= 1.0.0",
+      "InfrastructeProvider >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Proxies >= 8.0.8",
@@ -2424,7 +2534,23 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\AppContracts.csproj": {
+              "projectPath": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\AppContracts.csproj"
+            },
+            "C:\\Users\\MSi\\source\\repos\\App\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\MSi\\source\\repos\\App\\Core\\Core.csproj"
+            },
+            "C:\\Users\\MSi\\source\\repos\\App\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\MSi\\source\\repos\\App\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\MSi\\source\\repos\\App\\InfrastructePersistence\\InfrastructePersistence.csproj": {
+              "projectPath": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructePersistence\\InfrastructePersistence.csproj"
+            },
+            "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\InfrastructeProvider.csproj": {
+              "projectPath": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\InfrastructeProvider.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

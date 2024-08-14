@@ -17,37 +17,7 @@ public class ChatContext : DbContext
     {
         ConfigurateUsers(builder);
         ConfigurateMessages(builder);
-        
-        //builder.Entity<UserEntity>(entity =>
-        //{
-        //    entity.HasKey(x => x.Id).HasName("user_pkey");
-        //    entity.ToTable("Users");
-        //    entity.Property(x => x.Id).HasColumnName("user_id");
-        //    entity.Property(x => x.Name)
-        //          .HasMaxLength(255)
-        //          .HasColumnName("Name");
-        //});
-
-        //builder.Entity<MessageEntity>(entity =>
-        //{
-        //    entity.HasKey(x => x.Id).HasName("message_pkey");
-        //    entity.ToTable("Messages");
-        //    entity.Property(x => x.Id).HasColumnName("message_id");
-        //    entity.Property(x => x.Text).HasColumnName("text");
-        //    entity.Property(x => x.SenderId).HasColumnName("from_user_id");
-        //    entity.Property(x => x.RepicientId).HasColumnName("to_user_id");
-
-        //    entity.HasOne(x => x.FromUser)
-        //          .WithMany(p => p.FromMessages)
-        //          .HasForeignKey(c => c.FromUserId)
-        //          .HasConstraintName("messages_from_user_id_fkey");
-
-        //    entity.HasOne(x => x.ToUser)
-        //          .WithMany(p => p.ToMessages)
-        //          .HasForeignKey(c => c.ToUserId)
-        //          .HasConstraintName("messages_to_user_id_fkey");
-        //});
-        //base.OnModelCreating(builder);
+        base.OnModelCreating(builder);
     }
 
     private static void ConfigurateMessages(ModelBuilder builder)
@@ -63,7 +33,6 @@ public class ChatContext : DbContext
     {
         builder.Entity<UserEntity>().HasKey(x => x.Id);
         builder.Entity<UserEntity>().Property(x => x.Id).ValueGeneratedOnAdd();
-        builder.Entity<UserEntity>().HasIndex(x => x.Name).IsUnique();
-       
+        builder.Entity<UserEntity>().HasIndex(x => x.Name).IsUnique();       
     }
 }

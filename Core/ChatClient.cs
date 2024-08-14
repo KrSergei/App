@@ -1,5 +1,6 @@
 ﻿using AppContracts;
 using InfrastructeProvider;
+using System;
 using System.Net;
 
 namespace Core
@@ -20,15 +21,27 @@ namespace Core
 
         public override async Task Start()
         {
+            Console.WriteLine("Client started");
             var join = new Message { Text = _user.Name, Command = Command.Join };
             await _source.Send(join, _iPEndPoint, CancellationToken);
 
-            Task.Run(Listener);
+            await Task.Run(Listener);
 
             while (!CancellationToken.IsCancellationRequested)
             {
                 string input = (await Console.In.ReadLineAsync()) ?? string.Empty;
-                Message message = new Message() { Text = input, SenderId = _user.Id, Command = Command.None };
+
+                Message message;
+
+                if (input.Trim().ToLower().Equals("/exit", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    message = new () { SenderId = _user.Id, Command = Command.Exit };
+                } 
+                else
+                {
+                    message = new () { Text = input, SenderId = _user.Id, Command = Command.None };
+                }
+
                 await _source.Send(message, _iPEndPoint, CancellationToken);
             }
         }

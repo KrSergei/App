@@ -3,16 +3,29 @@
   "WorkspaceRootPath": "C:\\Users\\MSi\\source\\repos\\App\\App\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B4ACC166-A604-4D53-867D-5B1243BD3A3E}|..\\InfrastructeProvider\\InfrastructeProvider.csproj|c:\\users\\msi\\source\\repos\\app\\infrastructeprovider\\imessagesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4ACC166-A604-4D53-867D-5B1243BD3A3E}|..\\InfrastructeProvider\\InfrastructeProvider.csproj|c:\\users\\msi\\source\\repos\\app\\infrastructeprovider\\messagesource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8EA3B6C2-8C75-4D04-82A6-499AAA9ED7C1}|..\\Core\\Core.csproj|c:\\users\\msi\\source\\repos\\app\\core\\chatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EA3B6C2-8C75-4D04-82A6-499AAA9ED7C1}|..\\Core\\Core.csproj|c:\\users\\msi\\source\\repos\\app\\core\\chatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BAFB81-A9DA-4508-863F-FF6E20F641E0}|App.csproj|c:\\users\\msi\\source\\repos\\app\\app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10BAFB81-A9DA-4508-863F-FF6E20F641E0}|App.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{27185D57-53EE-4368-91B9-114A0C2EF0C4}|..\\InfrastructePersistence\\InfrastructePersistence.csproj|c:\\users\\msi\\source\\repos\\app\\infrastructepersistence\\context\\chatcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A589837B-0220-4627-B27D-181C64ED735A}|..\\Domain\\Domain.csproj|c:\\users\\msi\\source\\repos\\app\\domain\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{22658FF1-EE97-40DF-8819-C7B9D47401B0}|..\\AppContracts\\AppContracts.csproj|c:\\users\\msi\\source\\repos\\app\\appcontracts\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A589837B-0220-4627-B27D-181C64ED735A}|..\\Domain\\Domain.csproj|c:\\users\\msi\\source\\repos\\app\\domain\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B4ACC166-A604-4D53-867D-5B1243BD3A3E}|..\\InfrastructeProvider\\InfrastructeProvider.csproj|c:\\users\\msi\\source\\repos\\app\\infrastructeprovider\\resiveresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -25,24 +38,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 277,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IMessageSource.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\IMessageSource.cs",
+              "RelativeDocumentMoniker": "..\\InfrastructeProvider\\IMessageSource.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\IMessageSource.cs",
+              "RelativeToolTip": "..\\InfrastructeProvider\\IMessageSource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:25:29.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MessageSource.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\MessageSource.cs",
+              "RelativeDocumentMoniker": "..\\InfrastructeProvider\\MessageSource.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\MessageSource.cs",
+              "RelativeToolTip": "..\\InfrastructeProvider\\MessageSource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:25:27.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChatClient.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\Core\\ChatClient.cs",
+              "RelativeDocumentMoniker": "..\\Core\\ChatClient.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\Core\\ChatClient.cs",
+              "RelativeToolTip": "..\\Core\\ChatClient.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:14:09.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ChatContext.cs",
               "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructePersistence\\Context\\ChatContext.cs",
               "RelativeDocumentMoniker": "..\\InfrastructePersistence\\Context\\ChatContext.cs",
               "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructePersistence\\Context\\ChatContext.cs",
               "RelativeToolTip": "..\\InfrastructePersistence\\Context\\ChatContext.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAIwD0AAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-13T20:01:39.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "UserEntity.cs",
               "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\Domain\\UserEntity.cs",
               "RelativeDocumentMoniker": "..\\Domain\\UserEntity.cs",
@@ -55,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ResiveResult.cs",
               "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\InfrastructeProvider\\ResiveResult.cs",
               "RelativeDocumentMoniker": "..\\InfrastructeProvider\\ResiveResult.cs",
@@ -63,33 +115,45 @@
               "RelativeToolTip": "..\\InfrastructeProvider\\ResiveResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T20:40:59.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T20:40:59.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ChatServer.cs",
               "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\Core\\ChatServer.cs",
               "RelativeDocumentMoniker": "..\\Core\\ChatServer.cs",
               "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\Core\\ChatServer.cs",
               "RelativeToolTip": "..\\Core\\ChatServer.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwBIAAAAMAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T20:35:10.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\User.cs",
               "RelativeDocumentMoniker": "..\\AppContracts\\User.cs",
               "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\AppContracts\\User.cs",
               "RelativeToolTip": "..\\AppContracts\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAfAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T20:27:00.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MSi\\source\\repos\\App\\App\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MSi\\source\\repos\\App\\App\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T12:23:46.923Z",
               "EditorCaption": ""
             }
           ]

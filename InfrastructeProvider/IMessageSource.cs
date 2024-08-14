@@ -7,7 +7,5 @@ namespace InfrastructeProvider
     {
         Task<ResiveResult> Resive(CancellationToken cancellationToken);
         Task Send(Message message, IPEndPoint iPEndPoint, CancellationToken cancellationToken);
-        //IPEndPoint CreateEndpoint(string adress, int port);
-        //IPEndPoint GetServerEndpoint();
     }
 }
